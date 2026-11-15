@@ -14,7 +14,7 @@
 /* Layout: the Oakfall desk. Top bar (lights above, lockup with Gall as the l, controls), then binder | page | inspector. */
 :root{
   --desk:#e4e1da;--card:#ffffff;--card2:#f7f6f2;--ink:#1a1b20;--mid:#5e6068;--dim:#9a9ca3;--line:#d6d3cb;--accent:#5e8a5c;--onaccent:#ffffff;
-  --red:#e2574a;--blue:#3e6fd9;--green:#3f9a5b;--gold:#c9a24a;--tour-dim:rgb(14 16 24/.72);--tour-card:#10131c;--tour-glow:#8fbf7a;
+  --red:#e2574a;--blue:#3e6fd9;--green:#3f9a5b;--gold:#c9a24a;--tour-dim:rgb(14 16 24/.72);--tour-card:#10131c;--tour-glow:#9caf8c;
   --font-ui:"DM Sans",system-ui,-apple-system,sans-serif;--font-display:"Gloock",Georgia,serif;--font-body:"Newsreader","Iowan Old Style",Georgia,serif;--font-brand:"Plus Jakarta Sans","DM Sans",sans-serif;
   --gap:14px;--radius:12px;--page-size:17.5px;
 }
@@ -26,15 +26,25 @@ body{margin:0;background:var(--desk);color:var(--ink);font-family:var(--font-ui)
 button{font:inherit;color:inherit}
 .app{height:100%;display:flex;flex-direction:column;background:var(--desk);color:var(--ink);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 16px;position:relative;overflow:hidden}
 /* modes */
-.app[data-mode="dark"]{--desk:#1b1e24;--card:#262a33;--card2:#2e333d;--ink:#eceef2;--mid:#a3a8b3;--dim:#6b7180;--line:#3a3f4a;--accent:#8fbf7a;--onaccent:#14200f;--red:#ef7a6b;--blue:#7d9ae8;--green:#8fbf7a}
-.app[data-look="dusk"]{--accent:#2d4fd6;--tour-glow:#7d93ff}
-.app[data-look="dusk"][data-mode="dark"]{--desk:#0a0e33;--card:#10164a;--card2:#151c5a;--ink:#eef0ff;--mid:#a6afe6;--dim:#6b75b8;--line:#2a3380;--accent:#7d93ff;--onaccent:#0a0e33}
-.app[data-look="harvest"]{--desk:#e9dfcd;--card:#fbf5e9;--card2:#f3e9d6;--ink:#2a1a10;--mid:#6b5440;--dim:#a08c75;--line:#d8c8ac;--accent:#b4491b;--tour-glow:#e0864f}
-.app[data-look="harvest"][data-mode="dark"]{--desk:#1f1611;--card:#2a1f18;--card2:#33261d;--ink:#f1e6d6;--mid:#c2ad97;--dim:#7d6a58;--line:#45352a;--accent:#e0864f;--onaccent:#1f1611}
-.app[data-look="irongall"]{--accent:#4c6a9a;--tour-glow:#7fa7e8}
-.app[data-look="irongall"][data-mode="dark"]{--desk:#171c27;--card:#1e2432;--card2:#262d3b;--ink:#f3f4f1;--mid:#a5a9b0;--dim:#6a7080;--line:#3a4150;--accent:#7fa7e8;--onaccent:#171c27}
-.app[data-look="vellum"]{--desk:#ece5d3;--card:#f9f5ea;--card2:#f1ebdb;--ink:#2b2416;--mid:#6e6450;--dim:#a39a86;--line:#d9d0ba;--accent:#8c6a2e;--tour-glow:#c9a24a}
-.app[data-look="vellum"][data-mode="dark"]{--desk:#1c1913;--card:#26221a;--card2:#2f2a20;--ink:#efe8d8;--mid:#b3a88f;--dim:#766d5a;--line:#403a2c;--accent:#c9a24a;--onaccent:#1c1913}
+.app[data-mode="dark"]{--desk:#20231f;--card:#292e27;--card2:#32382f;--ink:#d5d7cc;--mid:#adb3a4;--dim:#9ba292;--line:#424a3d;--accent:#9caf8c;--onaccent:#20271b;--red:#ef7a6b;--blue:#7d9ae8;--green:#8fbf7a;}
+.app[data-look="moss"]{--desk:#e4e1da;--card:#ffffff;--card2:#fafaf7;--ink:#1a1b20;--mid:#5e6068;--dim:#9a9ca3;--line:#d6d3cb;--accent:#5e8a5c;--onaccent:#ffffff;--tour-glow:#9caf8c;}
+.app[data-look="moss"][data-mode="dark"]{--desk:#20231f;--card:#292e27;--card2:#32382f;--ink:#d5d7cc;--mid:#adb3a4;--dim:#9ba292;--line:#424a3d;--accent:#9caf8c;--onaccent:#20271b;}
+.app[data-look="dusk"]{--desk:#e4e1da;--card:#ffffff;--card2:#fafaf7;--ink:#1a1b20;--mid:#5e6068;--dim:#9a9ca3;--line:#d6d3cb;--accent:#2d4fd6;--onaccent:#ffffff;--tour-glow:#aaa0ca;}
+.app[data-look="dusk"][data-mode="dark"]{--desk:#24232c;--card:#2d2c38;--card2:#363543;--ink:#d8d5e1;--mid:#b1adbf;--dim:#a29db3;--line:#484453;--accent:#aaa0ca;--onaccent:#25212f;}
+.app[data-look="harvest"]{--desk:#e9dfcd;--card:#fbf5e9;--card2:#f3e9d6;--ink:#2a1a10;--mid:#6b5440;--dim:#a08c75;--line:#d8c8ac;--accent:#b4491b;--onaccent:#ffffff;--tour-glow:#e0864f;}
+.app[data-look="harvest"][data-mode="dark"]{--desk:#1f1611;--card:#2a1f18;--card2:#33261d;--ink:#f1e6d6;--mid:#c2ad97;--dim:#7d6a58;--line:#45352a;--accent:#e0864f;--onaccent:#1f1611;}
+.app[data-look="irongall"]{--desk:#e4e1da;--card:#ffffff;--card2:#fafaf7;--ink:#1a1b20;--mid:#5e6068;--dim:#9a9ca3;--line:#d6d3cb;--accent:#4c6a9a;--onaccent:#ffffff;--tour-glow:#98afc2;}
+.app[data-look="irongall"][data-mode="dark"]{--desk:#22262a;--card:#2b3035;--card2:#343a40;--ink:#d4d9dc;--mid:#acb5bc;--dim:#9da7b0;--line:#434c55;--accent:#98afc2;--onaccent:#202830;}
+.app[data-look="vellum"]{--desk:#ece5d3;--card:#f9f5ea;--card2:#f1ebdb;--ink:#2b2416;--mid:#6e6450;--dim:#a39a86;--line:#d9d0ba;--accent:#8c6a2e;--onaccent:#ffffff;--tour-glow:#c9a24a;}
+.app[data-look="vellum"][data-mode="dark"]{--desk:#1c1913;--card:#26221a;--card2:#2f2a20;--ink:#efe8d8;--mid:#b3a88f;--dim:#766d5a;--line:#403a2c;--accent:#c9a24a;--onaccent:#1c1913;}
+.app[data-look="cupid"]{--desk:#f0e1e4;--card:#fcf6f7;--card2:#f6ebee;--ink:#2b1a21;--mid:#6e4f5a;--dim:#a58893;--line:#dcc6cd;--accent:#b8375f;--onaccent:#ffffff;--tour-glow:#e9789a;}
+.app[data-look="cupid"][data-mode="dark"]{--desk:#241419;--card:#2e1b22;--card2:#38232b;--ink:#f5e9ec;--mid:#c7a4af;--dim:#80626c;--line:#4a313a;--accent:#e9789a;--onaccent:#241419;}
+.app[data-look="vscode"]{--desk:#f8f8f8;--card:#ffffff;--card2:#f2f2f2;--ink:#3b3b3b;--mid:#616161;--dim:#676767;--line:#cecece;--accent:#005fb8;--onaccent:#ffffff;--tour-glow:#4daafc;}
+.app[data-look="vscode"][data-mode="dark"]{--desk:#181818;--card:#1f1f1f;--card2:#2b2b2b;--ink:#cccccc;--mid:#adadad;--dim:#9d9d9d;--line:#4c4c4c;--accent:#4daafc;--onaccent:#181818;}
+.app[data-look="github"]{--desk:#f6f8fa;--card:#ffffff;--card2:#f6f8fa;--ink:#1f2328;--mid:#57606a;--dim:#626b74;--line:#d0d7de;--accent:#0969da;--onaccent:#ffffff;--tour-glow:#58a6ff;}
+.app[data-look="github"][data-mode="dark"]{--desk:#010409;--card:#0d1117;--card2:#161b22;--ink:#e6edf3;--mid:#a6afb9;--dim:#939da8;--line:#30363d;--accent:#58a6ff;--onaccent:#0d1117;}
+.app[data-look="clarity"]{--desk:#f5f5f5;--card:#ffffff;--card2:#e8e8e8;--ink:#111111;--mid:#333333;--dim:#494949;--line:#686868;--accent:#0940a3;--onaccent:#ffffff;--tour-glow:#ffda70;}
+.app[data-look="clarity"][data-mode="dark"]{--desk:#080808;--card:#121212;--card2:#202020;--ink:#ffffff;--mid:#e0e0e0;--dim:#bfbfbf;--line:#909090;--accent:#ffda70;--onaccent:#121212;}
 .app[data-layout="classic"]{--gap:0px;--radius:0px}
 .app[data-focus="1"]{--desk:#141414;--card:#141414;--card2:#1c1c1c;--ink:#e9e6df;--mid:#8a867e;--dim:#4a4742;--line:#262522}
 /* top bar */
@@ -155,10 +165,16 @@ button{font:inherit;color:inherit}
 .th i{position:absolute;top:6px;bottom:6px;background:var(--card);border:1px solid var(--line);border-radius:5px}
 .th.d .a{left:6px;width:26%}.th.d .b{left:31%;width:41%}.th.d .c{right:6px;width:22%}
 .th.c{background:var(--card)}.th.c i{top:0;bottom:0;border:0;border-radius:0;background:transparent}.th.c .a{left:0;width:27%;border-right:1px solid var(--line)}.th.c .c{right:0;width:27%;border-left:1px solid var(--line)}
-.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;max-width:660px}
-.lk{appearance:none;cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:7px;background:var(--card2);font-weight:500}
-.lk.on{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
-.lk .sw{height:40px;border-radius:7px;position:relative;margin-bottom:6px}.lk .sw i{position:absolute;left:8px;top:8px;width:42%;height:6px;border-radius:3px}.lk .sw b{position:absolute;left:8px;top:19px;width:64%;height:6px;border-radius:3px;opacity:.5}
+.look-group{margin-top:18px}.look-group+.look-group{padding-top:18px;border-top:1px solid var(--line)}.look-group h3{font:600 15px var(--font-ui);margin:0}.look-group>p{margin:4px 0 12px}
+.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px;max-width:760px}
+.lk{appearance:none;cursor:pointer;position:relative;min-width:0;border:1.5px solid var(--line);border-radius:10px;padding:7px;background:var(--card2);font-weight:500;text-align:left}
+.lk.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}.lk:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
+.lk-name{display:block;min-height:2.6em;padding-right:13px;font-size:12px;line-height:1.3}.lk-check{display:none;position:absolute;right:6px;bottom:8px;font-size:14px}.lk.on .lk-check{display:block}
+.lk .sw{height:58px;border-radius:5px;position:relative;margin-bottom:8px;overflow:hidden;background:var(--preview-desk)}
+.sw-sidebar{position:absolute;left:7px;top:10px;width:12px;height:3px;background:var(--preview-accent);box-shadow:0 7px 0 var(--preview-accent)}
+.sw-page{position:absolute;inset:5px 5px 5px 25px;padding:3px 7px;background:var(--preview-card);color:var(--preview-ink);border-radius:3px}
+.sw-page b{display:block;font:20px var(--font-body)}.sw-page i{display:block;width:75%;height:2px;margin-top:2px;background:var(--preview-ink)}
+.app[data-look="clarity"]:not([data-focus="1"]) :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .srow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);max-width:560px}
 .srow small{display:block;color:var(--mid);margin-top:2px}
 .tg{appearance:none;border:0;cursor:pointer;width:40px;height:23px;border-radius:999px;background:var(--line);position:relative;flex:none;padding:0}
@@ -382,7 +398,8 @@ function palette() {
 }
 
 /* ---- settings ---- */
-const LOOKS = [["moss", "Moss", "#1c2418", "#7e9a6b"], ["dusk", "Dusk", "#0a0e33", "#7d93ff"], ["harvest", "Harvest", "#e9dfcd", "#b4491b"], ["irongall", "Iron gall", "#1e2432", "#7fa7e8"], ["vellum", "Vellum", "#f6f1e4", "#8c6a2e"]];
+const LOOK_GROUPS = [{"id":"oakfall","name":"Oakfall","description":"The original looks, from Vellum to Cupid’s Roses."},{"id":"editor","name":"Editor classics","description":"Familiar editor palettes with restrained accents."},{"id":"contrast","name":"High contrast","description":"Stronger text, borders, and selections."}];
+const LOOKS = [{"id":"moss","name":"Moss","group":"oakfall","preview":{"light":{"desk":"#e4e1da","card":"#ffffff","ink":"#1a1b20","accent":"#5e8a5c"},"dark":{"desk":"#20231f","card":"#292e27","ink":"#d5d7cc","accent":"#9caf8c"}}},{"id":"dusk","name":"Dusk","group":"oakfall","preview":{"light":{"desk":"#e4e1da","card":"#ffffff","ink":"#1a1b20","accent":"#2d4fd6"},"dark":{"desk":"#24232c","card":"#2d2c38","ink":"#d8d5e1","accent":"#aaa0ca"}}},{"id":"harvest","name":"Autumn Harvest","group":"oakfall","preview":{"light":{"desk":"#e9dfcd","card":"#fbf5e9","ink":"#2a1a10","accent":"#b4491b"},"dark":{"desk":"#1f1611","card":"#2a1f18","ink":"#f1e6d6","accent":"#e0864f"}}},{"id":"irongall","name":"Iron gall","group":"oakfall","preview":{"light":{"desk":"#e4e1da","card":"#ffffff","ink":"#1a1b20","accent":"#4c6a9a"},"dark":{"desk":"#22262a","card":"#2b3035","ink":"#d4d9dc","accent":"#98afc2"}}},{"id":"vellum","name":"Vellum","group":"oakfall","preview":{"light":{"desk":"#ece5d3","card":"#f9f5ea","ink":"#2b2416","accent":"#8c6a2e"},"dark":{"desk":"#1c1913","card":"#26221a","ink":"#efe8d8","accent":"#c9a24a"}}},{"id":"cupid","name":"Cupid's Roses","group":"oakfall","preview":{"light":{"desk":"#f0e1e4","card":"#fcf6f7","ink":"#2b1a21","accent":"#b8375f"},"dark":{"desk":"#241419","card":"#2e1b22","ink":"#f5e9ec","accent":"#e9789a"}}},{"id":"vscode","name":"VS Code Modern","group":"editor","preview":{"light":{"desk":"#f8f8f8","card":"#ffffff","ink":"#3b3b3b","accent":"#005fb8"},"dark":{"desk":"#181818","card":"#1f1f1f","ink":"#cccccc","accent":"#4daafc"}}},{"id":"github","name":"GitHub","group":"editor","preview":{"light":{"desk":"#f6f8fa","card":"#ffffff","ink":"#1f2328","accent":"#0969da"},"dark":{"desk":"#010409","card":"#0d1117","ink":"#e6edf3","accent":"#58a6ff"}}},{"id":"clarity","name":"Clarity","group":"contrast","preview":{"light":{"desk":"#f5f5f5","card":"#ffffff","ink":"#111111","accent":"#0940a3"},"dark":{"desk":"#080808","card":"#121212","ink":"#ffffff","accent":"#ffda70"}}}];
 const GCOL = [["Ink", ""], ["Moss", "#5e8a5c"], ["Oak gall", "#4c6a9a"], ["Rust", "#b4491b"], ["Gold", "#c9a24a"], ["Plum", "#7a4b8a"], ["Sea", "#3f8a8f"]];
 const OUTFITS = [["auto", "By season"], ["none", "Plain"], ["tutorial", "Tutorial"], ["editor", "Editor"], ["winter", "Winter"], ["spring", "Spring"], ["summer", "Summer"], ["autumn", "Autumn"], ["party", "Milestone"]];
 let setSection = "appearance";
@@ -400,7 +417,7 @@ function settings(sec) {
     if (setSection === "appearance") h = `<h2>Appearance</h2><p class="sub">How Oakfall looks to you. The project's files never change.</p>
       <div class="grp"><b>Mode</b>${seg("mode", [["light", "Light"], ["dark", "Dark"], ["system", "System"]])}</div>
       <div class="grp"><b>Layout style</b><div class="cards">${[["desk", "Desk", "Cards with room between them.", "d"], ["classic", "Classic", "One joined sheet, hairlines, a galley face.", "c"]].map(([v, n, t, c]) => `<button class="lc ${s.layout === v ? "on" : ""}" data-k="layout" data-v="${v}"><div class="th ${c}"><i class="a"></i><i class="b"></i><i class="c"></i></div><span>${n}</span><small>${t}</small></button>`).join("")}</div><p class="muted" style="margin:10px 0 0">Focus, the page alone, is on the toolbar and ⌘⇧F.</p></div>
-      <div class="grp"><b>Look</b><div class="looks">${LOOKS.map(([v, n, a, b]) => `<button class="lk ${s.look === v ? "on" : ""}" data-k="look" data-v="${v}"><div class="sw" style="background:${a}"><i style="background:${b}"></i><b style="background:${b}"></b></div>${n}</button>`).join("")}</div></div>
+      <div class="grp"><b>Themes</b>${LOOK_GROUPS.map(group => `<section class="look-group" aria-labelledby="look-group-${group.id}"><h3 id="look-group-${group.id}">${group.name}</h3><p class="muted">${group.description}</p><div class="looks">${LOOKS.filter(k => k.group === group.id).map(k => { const p = k.preview[app.dataset.mode]; return `<button type="button" class="lk ${s.look === k.id ? "on" : ""}" aria-label="${esc(k.name)}" aria-pressed="${s.look === k.id}" data-k="look" data-v="${k.id}"><div class="sw" aria-hidden="true" style="--preview-desk:${p.desk};--preview-card:${p.card};--preview-ink:${p.ink};--preview-accent:${p.accent}"><i class="sw-sidebar"></i><span class="sw-page"><b>Aa</b><i></i></span></div><span class="lk-name">${esc(k.name)}</span><span class="lk-check" aria-hidden="true">✓</span></button>`; }).join("")}</div></section>`).join("")}</div>
       <div class="grp"><b>Page</b><div class="srow"><div>Paper<small>A light page on a dark desk, if you like</small></div>${seg("paper", [["light", "Light"], ["match", "Match"]])}</div>
       <div class="srow"><div>Text size<small id="sz">${s.size} px</small></div><input type="range" id="size" min="14" max="24" step="0.5" value="${s.size}" aria-label="Text size"></div>
       <div class="srow"><div>Reduce motion<small>No rides, no turns, no pulses</small></div><button class="tg ${s.rm ? "on" : ""}" id="rm" role="switch" aria-checked="${s.rm}"><i></i></button></div></div>`;
@@ -414,7 +431,7 @@ function settings(sec) {
     else h = `<h2>About</h2><p class="sub">Oakfall, the writing studio. This is an interactive preview built on the Harrowmere demo project; your edits stay in this browser.</p><p class="muted">A folder of plain Markdown is a project. Snapshots are plain copies. Nothing here needs Oakfall to be read.</p><button class="btn" id="reset">Reset the demo</button>`;
     back.innerHTML = `<div class="settings" role="dialog" aria-label="Settings"><div class="rail"><h6>Settings</h6>${[["appearance", "Appearance"], ["modules", "Modules"], ["gall", "Gall"], ["about", "About"]].map(([v, n]) => `<button class="ri ${setSection === v ? "on" : ""}" data-sec="${v}">${n}</button>`).join("")}</div><div class="sbody">${h}</div></div>`;
     back.querySelectorAll("[data-sec]").forEach(b => b.onclick = () => { setSection = b.dataset.sec; draw(); });
-    back.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { s[b.dataset.k] = b.dataset.v; persist(); applySet(); draw(); });
+    back.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { const key = b.dataset.k, value = b.dataset.v, top = back.querySelector(".sbody").scrollTop; s[key] = value; persist(); applySet(); draw(); back.querySelector(".sbody").scrollTop = top; back.querySelector(`[data-k="${key}"][data-v="${value}"]`)?.focus({ preventScroll: true }); });
     back.querySelectorAll("[data-mod]").forEach(b => b.onclick = () => { state[b.dataset.mod] = !state[b.dataset.mod]; persist(); applySet(); draw(); });
     back.querySelectorAll("[data-gc]").forEach(b => b.onclick = () => { s.gall = b.dataset.gc; persist(); applySet(); draw(); gallSmile(); });
     back.querySelectorAll("[data-of]").forEach(b => b.onclick = () => { s.outfit = b.dataset.of; persist(); dressHome(); draw(); });
@@ -452,7 +469,7 @@ const STOPS = [
   ["#sheet", "The page", "Where you write. Every open scene is a tab. The title and the facts above the text come from the scene's own notes; the text saves itself as you go."],
   ["#inspector", "The inspector", "Everything about the scene you are on: synopsis, status, date, and snapshots. Take one before a risky rewrite and watch the number move."],
   ["#btn-search", "Search or command", "Press ⌘K to find any scene or any command by name."],
-  ["#btn-settings", "Settings", "Light or dark, Desk or Classic, five looks, the page's paper and type size, and Gall's colour and outfit."],
+  ["#btn-settings", "Settings", "Light or dark, Desk or Classic, grouped themes, the page's paper and type size, and Gall's colour and outfit."],
 ];
 const tour = (() => {
   const T = $("#tour"), cut = T.querySelector(".cut"), ring = T.querySelector(".ring"), card = T.querySelector(".tcard"), guide = T.querySelector(".guide");
